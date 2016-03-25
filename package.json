@@ -1,0 +1,7 @@
+{
+	"name":"1955 API", 
+	"description": "A simple API server that holds on to a list of people born in 1955", 
+	"dependencies":{
+
+	}
+}
