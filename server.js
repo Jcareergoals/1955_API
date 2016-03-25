@@ -14,26 +14,35 @@ app.set('view engine', 'ejs');
 
 mongoose.connect('mongodb://localhost/1955_api'); 
 
-var nameSchema = mongoose.createSchema({
+var nameSchema = new mongoose.Schema({
 	name: String, 
 	date: {type: Date, default: Date.now}, 
 }); 
 mongoose.model('Model', nameSchema); 
-var Model = mongoose.model('Model');
+var Name = mongoose.model('Model');
 
 // routes will eventually be delegated to a controller folder
 app.get('/', function(req, res){
-	res.send('will serve up the full collection of people born in 1955.'); 
+	Name.find({}, function(err, names){
+		console.log(names); 
+		res.json(names); 
+	});
 }); 
 app.get('/new/:name', function(req, res){
-	res.send('will add '+req.params.name+' into the database.'); 
+	name = new Name({ name: req.params.name }); 
+	name.save(); 
+	res.redirect('/'); 
 }); 
 app.get('/remove/:name', function(req, res){
-	res.send('will delete '+req.params.name+' from the database.'); 
+	Name.remove({name:req.params.name}, function(err){
+		res.redirect('/'); 
+	});
 }); 
 app.get('/:name', function(req, res){
-	res.send('will bring up the document of that particular person: '+req.params.name); 
-})
+	Name.findOne({name:req.params.name}, function(err, data){
+		res.json(data); 
+	});
+}); 
 
 app.listen(8000, function(){
 	console.log("Listening at port: 8000"); 
