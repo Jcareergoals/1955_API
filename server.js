@@ -14,7 +14,12 @@ app.set('view engine', 'ejs');
 
 mongoose.connect('mongodb://localhost/1955_api'); 
 
-
+var nameSchema = mongoose.createSchema({
+	name: String, 
+	date: {type: Date, default: Date.now}, 
+}); 
+mongoose.model('Model', nameSchema); 
+var Model = mongoose.model('Model');
 
 // routes will eventually be delegated to a controller folder
 app.get('/', function(req, res){
