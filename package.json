@@ -3,8 +3,7 @@
   "description": "A simple API server that holds on to a list of people born in 1955",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "ejs": "^2.4.1",
-    "express.js": "^1.0.0",
-    "mongoose": "^4.4.10"
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11"
   }
 }
