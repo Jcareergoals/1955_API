@@ -15,13 +15,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
 		<!-- angular script -->
-		<script></script>
+		<script src="./static/config.js"></script>
 		<!-- css -->
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 		<!-- <meta http-equiv="refresh" content="1"> --> <!-- used for testing purposes --> 
 	</head>
-	<body>
-		<div class="container-fluid">
+	<body ng-app='dashboard'>
+		<div class="container-fluid" ng-controller='people'>
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 header">
 					<h2>1955 Dashboard</h2>
@@ -32,10 +32,10 @@
 					<form class='form form-group'>
 						<div class="form-group">
 							<label for='people'>Add people who were born in 1955!</label>
-							<input type='text' class='form-control' id='people'>
+							<input type='text' class='form-control' id='people' ng-model='newName.name'>
 						</div>
 						<div class="form-group">
-							<button class='btn btn-primary'>Submit</button>
+							<button class='btn btn-primary' ng-click='addUser()'>Submit</button>
 						</div>
 					</form>
 				</div>
@@ -47,9 +47,9 @@
 							<th class='col-xs-7'>Name</th>
 							<th>Action</th>
 						</tr>
-						<tr>
-							<td>dfdf</td>
-							<td><button class='btn btn-danger col-xs-2'>Delete</button></td>
+						<tr ng-repeat='x in names'>
+							<td>{{ x.name }}</td>
+							<td><button class='btn btn-danger col-xs-2' ng-click='remove(x)'>Delete</button></td>
 						</tr>
 					</table>
 				</div>
