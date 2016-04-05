@@ -1,0 +1,18 @@
+body {
+	font-family: tahoma; 
+	background: linear-gradient(90deg, black, grey); 
+	color: gray; 
+}
+.header {border-bottom: 1px solid gray;}
+.gold {background: linear-gradient(180deg, rgba(250,0,0,.6), rgba(250,180,50,.7));}
+button {
+	float: right; 
+	background-color: inherit;
+}
+table tr:first-of-type {background-color: silver;}
+.table_div {
+	max-height: 300px; 
+	overflow: auto;
+}
+
+/*.red {background-color: rgba(250,0,0,.7); }*/ /*used for testing purposes*/
