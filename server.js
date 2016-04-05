@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 
 // mongoose configurations & routes
 require('./server/config/mongoose.js'); 
-	console.log('mongoose successfully created'); 
 require('./server/config/routes.js')(app); 
 
 app.listen(8000, function(){

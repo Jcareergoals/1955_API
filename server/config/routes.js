@@ -6,7 +6,7 @@ module.exports = function(app){
 		Controller.show(req, res); 
 	}); 
 	app.get('/new/:name', function(req, res){
-		Controller.create(req, res); 
+		Controller.create(req, res);  
 	}); 
 	app.get('/remove/:name', function(req, res){
 		Controller.delete(req, res); 
@@ -15,4 +15,3 @@ module.exports = function(app){
 		Controller.showOne(req, res); 
 	}); 
 }
-console.log('routes created and working'); 
