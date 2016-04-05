@@ -7,3 +7,5 @@ var nameSchema = new mongoose.Schema({
 
 mongoose.model('Name', nameSchema); 
 
+
+// file location: /server/models/name.js

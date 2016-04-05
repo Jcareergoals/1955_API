@@ -20,6 +20,7 @@ dashboard.factory('peopleFactory', function($http){
 	}
 	return factory; 
 }); 
+
 // controller
 dashboard.controller('people', function($scope, peopleFactory){
 	$scope.names = []; 
@@ -38,3 +39,6 @@ dashboard.controller('people', function($scope, peopleFactory){
 		}); 
 	}
 }); 
+
+
+// file location: /clients/static/config.js

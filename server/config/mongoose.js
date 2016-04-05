@@ -5,3 +5,6 @@ mongoose.connect('mongodb://localhost/1955_api');
 
 // Name model
 require('./../models/name.js'); 
+
+
+// file location: /server/config/mongoose.js

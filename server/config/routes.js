@@ -12,7 +12,12 @@ module.exports = function(app){
 		.get('/remove/:name', function(req, res){
 			Controller.delete(req, res)
 		})
+
+		/* The below method is not in use */ 
 	// app.get('/:name', function(req, res){
 	// 	Controller.showOne(req, res); 
 	// }); 
 }
+
+
+// file location: /server/config/routes.js

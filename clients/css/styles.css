@@ -14,5 +14,7 @@ table tr:first-of-type {background-color: silver;}
 	max-height: 300px; 
 	overflow: auto;
 }
-
 /*.red {background-color: rgba(250,0,0,.7); }*/ /*used for testing purposes*/
+
+
+/* file location: /clients/css/styles.css         */

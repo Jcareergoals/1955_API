@@ -22,6 +22,9 @@ module.exports = {
 			}); 
 		});
 	} 
+
+	/* The below method is not in use */ 
+
 	// showOne: function(req, res){
 	// 	urlName = decodeURI(req.params.name); // replaces any %20 with space 
 	// 	Name.findOne({name:urlName}, function(err, data){
@@ -29,3 +32,6 @@ module.exports = {
 	// 	});
 	// }
 }
+
+
+// file location: /server/controllers/name.js
